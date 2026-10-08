@@ -1,0 +1,24 @@
+import turtle
+import random
+
+wn = turtle.Screen()
+alex = turtle.Turtle()
+
+colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+
+lines_per_color = int(input("How many lines should each color have? "))
+repetitions = int(input("How many times should the color pattern repeat? "))
+
+random.shuffle(colors)
+
+total_lines = len(colors) * lines_per_color * repetitions
+
+for x in range(total_lines):
+    color_index = (x // lines_per_color) % len(colors)
+
+    alex.pencolor(colors[color_index])
+    alex.pensize(x / 100 + 1)
+    alex.forward(x)
+    alex.left(59)
+
+turtle.done()
