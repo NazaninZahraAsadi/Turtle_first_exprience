@@ -1,0 +1,11 @@
+import turtle
+
+wn = turtle.Screen()
+alex = turtle.Turtle()
+
+colors = ["red", "blue", "green", "orange", "purple", "yellow"]
+
+for x in range(300):
+    alex.pensize(x / 100 + 1)
+    alex.forward(x)
+    alex.left(59)
